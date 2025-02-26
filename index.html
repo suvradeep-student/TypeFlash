@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeBlast</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <header class="overlay-content"> 
+            <h1 class="color-changing">TypeBlast</h1>
+            <p>Test your typing speed and accuracy</p>
+    </header>
+    <div id="background-video-container">
+        <video id="background-video" autoplay loop muted playsinline>
+            <source src="150883-799711528_small.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <main>
+        <section id="settings-bar">
+            <div class="setting-group">
+                <label for="time-duration">Duration:</label>
+                <select id="time-duration">
+                    <option value="30">30 seconds</option>
+                    <option value="60" selected>60 seconds</option>
+                    <option value="120">120 seconds</option>
+                </select>
+            </div>
+            <div class="setting-group">
+                <label for="theme-select">Theme:</label>
+                <select id="theme-select">
+                    <option value="quotes" selected>Quotes</option>
+                    <option value="proverbs">Proverbs</option>
+                    <option value="dialogues">Dialogues</option>
+                    <option value="custom">Custom Text</option>
+                </select>
+            </div>
+            <div class="setting-group">
+                <label for="language-select">Language:</label>
+                <select id="language-select">
+                    <option value="en" selected>English</option>
+                    <option value="es">Spanish</option>
+                    </select>
+            </div>
+        </section>
+
+        <section id="challenge-area">
+            <div id="text-display">
+                <span id="text-content"></span>
+            </div>
+            <textarea id="typing-input" placeholder="Start typing here..."></textarea>
+        </section>
+
+        <section id="results-area">
+            <div id="timer">Time: <span id="time-left">60</span>s</div>
+            <div id="wpm">WPM: <span id="wpm-value">0</span></div>
+            <div id="accuracy">Accuracy: <span id="accuracy-value">100</span>%</div>
+            <div id="cpm">CPM: <span id="cpm-value">0</span></div>
+            <button id="restart-btn">Restart</button>
+        </section>
+
+        <section id="custom-text-area" class="hidden">
+            <h2>Enter Custom Text</h2>
+            <textarea id="custom-text-input" placeholder="Paste your custom text here"></textarea>
+            <button id="load-custom-text-btn">Load Custom Text</button>
+        </section>
+
+        <section id="leaderboard-area">
+            <h2>Leaderboard</h2>
+            <table id="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>WPM</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+            <div id="leaderboard-message">No scores yet. Be the first!</div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="ft">&copy; 2024 Typing Speed Test Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
